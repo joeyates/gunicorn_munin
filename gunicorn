@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 #
-#   gunicorn_status - A munin plugin for Linux to monitor gunicorn processes
+#  gunicorn_status - A munin plugin for Linux to monitor gunicorn processes
 #  Copyright (C) 2011 Kristaps Kūlis - kristaps.kulis@gmail.com
 #  Based on unicorn munin plugin by Shinji Furuya http://exchange.munin-monitoring.org/plugins/unicorn_status/details
 #  Licensed under the MIT license:
@@ -27,7 +27,7 @@ module Munin
         chunks = line.strip.split(/\s+/, 5)
         pid, pcmd = chunks[0], chunks[4]
         next if pid !~ /\A\d+\z/ or pcmd !~ /gunicorn/
-          result << pid.to_i
+        result << pid.to_i
       end
       result
     end
